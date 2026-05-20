@@ -1,0 +1,49 @@
+1. What is IAM in AWS?
+Ans: Amazon Web Services IAM (identity & Access Management) is a service which securely manages users, permission and access to AWS resources.
+Example: If a DevOps engineer wants to access only to Ec2, then IAM will restrict the access and cannot delete the other resources like s3, VPC. 
+
+2. What is the difference between IAM User and IAM Role?
+Ans:
+IAM User: Permanent identity with long term credentials (username, passwork or access keys)
+IAM Role: Temporary access with permission, usually assumed by users or AWS services 
+Example: If a DevOps engineer login as IAM User, but the Ec2 wants to access the s3 with IAM Role.
+
+3. What are IAM Policies in AWS?
+Ans: IAM Policies are JSON format which is used to define the permission (allow or deny) for the AWS resources and actions.
+Example: policy will allow the user to start/stop ec2 instance but deny deleting the instances.
+
+4. What is the difference between Managed Policy and Inline Policy?
+Ans: 
+Managed Policy: Resuable policy can be attached to multiple users/groups/roles.
+Inline Policy: Directly attached to single user/group/role for one specifice purpose.
+Example:
+If 10 devops engineer need to access ec2 instance, use managed policy.
+If only one admin wants specifical permission, use inline policy.
+
+5. What are the main components of IAM?
+Ans:
+users: individual identity for a person/service
+group: collection of users with same permission
+role: temporary access/permission
+policy: policy with json document
+Example:
+In a devops team, all members are added in the devops group and can access to ec2 instance and s3 bucket. Ec2 instance can interact with s3 using IAM role.
+
+6. What is the difference between Authentication and Authorization in IAM?
+Ans:
+Authentication: Verifies who you are login using (username, password, MFA)
+Authorization: Decides what can be accessed after login
+Example: If devops engineer logging the AWS console (authentication), once logged in and permission for the user to access only s3 not RDS (authorization)
+
+7. What is MFA in IAM and why is it important?
+Ans: MFA is multi factor authentication adds as security layer for the authentication.
+It's a second level authentication method with username/password/
+Example: if the user logged in using username/password, otp will be submitted from the authenticator app.
+
+8. What is the AWS Root User Account?
+Ans: Root user account is created when AWS account is created first, it has access to all the AWS services and resources.
+Example: The root user has access to all the services, so they can change the account settings and logging out AWS account.
+
+
+
+
