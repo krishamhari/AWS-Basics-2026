@@ -44,6 +44,26 @@ Example: if the user logged in using username/password, otp will be submitted fr
 Ans: Root user account is created when AWS account is created first, it has access to all the AWS services and resources.
 Example: The root user has access to all the services, so they can change the account settings and logging out AWS account.
 
+9. What is the Principle of Least Privilege in IAM? (Very Important)
+Ans: The principle of least privilege in IAM is to give the minimum required permission to user/service to perform their task.
+Example: jenkins server upload the build artifact in s3.
+Give only putobject permssion to s3.
+Avoid: 
+full s3 access 
+ec2 access
+
+10. What is Assume Role in AWS IAM? (Very Important)
+Ans: Assume a role is temporary taking permission from the IAM role to access the AWS resources.
+Example: If we have dev, qa, prod account. We have a IAM role in the dev account to access the resources.
+Assume a role is temporarily taking permission to access prod account for doing some task. Instead of creating a new IAM user for Prod account.
+
+11. What is Cross-Account Access in AWS IAM? (Very Important)
+
+12. What is a Trust Relationship in IAM Role? (Very Important)
+
+
+
+
 
 
 
