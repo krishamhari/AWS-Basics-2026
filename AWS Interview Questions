@@ -66,10 +66,32 @@ Ans: Dev account can temporarily access the Prod account by assuming an IAM role
 Simple flow:
 Dev Account → Assume Role → Prod Account Role → Trust Relationship validates access → Least Privilege permissions applied
 
+13. What is the difference between IAM Role and IAM Policy? (Very Frequently Asked)
+Answer:
+IAM Role → Provides temporary permissions to users/services.
+IAM Policy → Defines what permissions are allowed or denied.
+Example:
+Think of an office:
+Role = Temporary access card
+Policy = Rules written on that card
 
+14. What is the difference between IAM User, Group, and Role? (Very Important)
+Answer:
+IAM User → Identity for a person/application with permanent credentials.
+IAM Group → Collection of users with same permissions.
+IAM Role → Temporary permissions assumed by users/services.
 
+15. What are AWS Access Keys?
+Ans: AWS Access keys are credentatils which used to access AWS services programatiically using AWS CLI, Terraform, Jenkins.
+It contains access key id, secret access key.
+Example: If jenkins wants to uploda the artifacts in s3. Jenkins will store the access keys instead of storing it create a IAM role. 
+         Rotate the keys regularly.
+If we run commands in AWS CLI: aws s3 ls 
+aws check the access keys are configured or not to access the s3 bucket.
 
+16. What is the difference between IAM Role and Access Keys?
+Ans: 
+IAM Role: Temporary credentails used for the users/services and automattically provided by AWS
+Access Keys: long term credentials used for programatic access
 
-
-
-
+17. 
