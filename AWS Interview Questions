@@ -57,9 +57,15 @@ Ans: Assume a role is temporary taking permission from the IAM role to access th
 Example: If we have dev, qa, prod account. We have a IAM role in the dev account to access the resources.
 Assume a role is temporarily taking permission to access prod account for doing some task. Instead of creating a new IAM user for Prod account.
 
-11. What is Cross-Account Access in AWS IAM? (Very Important)
+11. What is a Trust Relationship in IAM Role? (Very Important)
+Ans: It says who can use the assume role.
 
-12. What is a Trust Relationship in IAM Role? (Very Important)
+12. What is Cross-Account Access in AWS IAM? (Very Important)
+Ans: Dev account can temporarily access the Prod account by assuming an IAM role created in the Prod account. 
+     That role follows least privilege access, and the trust relationship defines which account/user/service is allowed to assume the role.
+Simple flow:
+Dev Account → Assume Role → Prod Account Role → Trust Relationship validates access → Least Privilege permissions applied
+
 
 
 
