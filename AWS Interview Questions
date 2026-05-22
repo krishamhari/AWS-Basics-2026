@@ -94,4 +94,58 @@ Ans:
 IAM Role: Temporary credentails used for the users/services and automattically provided by AWS
 Access Keys: long term credentials used for programatic access
 
-17. 
+17. What is an IAM Permission Boundary?
+Ans: IAM Permission Boundary will set the maximum permission a user or role, even if the extra permissions is added later those will be denied.
+Example: 
+A developer can access to Ec2, s3 and not RDS and the boundary permisison is set upto ec2, s3.
+Even if someone given access to RDS, based on the boundary permission he cannot access to RDS.
+
+IAM Policy: Grants the permission
+IAM Boundary: Limit the permission
+
+18. What happens if there is an Explicit Deny in IAM?
+Ans: In AWS IAM, explicit deny always overrides allow, even if the other policy gives permission. 
+Example: 
+EC2 full access is allowed
+EC2 instance termination is denied.
+
+Now, the person can access to EC2 Prodcution but cannot terminate the EC2 instance.
+Deny always wins.
+
+
+19. What is the IAM Policy Evaluation Logic? 
+Ans: AWS checks permissions are in the specific order whether access should be allowed or denied.
+Flow: 
+By default - deny
+allow or deny permission - allow
+Explicit deny - deny immediately
+
+Example:
+Hari tried to access EC2
+Policy A: Allow full ec2 access
+Policy B: Deny terminate ec2 in prod account
+
+So, ec2 can be managed but can not be terminated.
+Explicit deny wins.
+
+20. What is AWS STS (Security Token Service)?
+Ans: AWS STS provides temporary security credential to access the AWS resources.
+Example:
+DEV account wants to access the Production account.
+Assume role ---> AWS STS ----> Temporary credentials ---> Access Production account
+
+When we click assume role, AWS STS automatically provide the temporary credentials to access the prodcutions account
+Temporary credentails includes:
+Temporary access key
+secret 
+security toke
+
+21. 
+
+
+
+
+
+
+
+ 
