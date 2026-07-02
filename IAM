@@ -4,7 +4,13 @@ IAM Group - test-group is created and added the test-user in the group.
 
 IAM Policy - test-policy will allow EC2 full access and deny terminate instance are created as custom managed policy. Attached custom managed policy to the test-group Now the test-user can access full ec2 instance but deny to terminate the instances. 
 
-IAM Role - test-role is created with trust policy as same account and added permission policy as to access full s3 bucket. Now, Test-user is authorized to assume the role using inline policy and added the IAM Role ARN in the inline policy. Switch to role, url is copied from the IAM ROLE(test-role). URL is copied and pasted on top of test-user account profile. test-user assume role and access s3 bucket. This can be done like test-user can access the production account from dev-account where the trust policy mention the assume role for production accounts. Instead of giving a user account for production, a person can access the production s3 bucket.  (Cross account access)
+IAM Role - 
+test-role is created with trust policy as same account and added permission policy as to access full s3 bucket. 
+Now, Test-user is authorized to assume the role using inline policy and added the IAM Role ARN in the inline policy. 
+Switch to role with temporary credentials, url is copied from the IAM ROLE(test-role). 
+URL is copied and pasted on top of test-user account profile. user with test-role can access s3 bucket. 
+Note: This can be done like test-user can access the production account from dev-account where the trust policy mention the assume role for production accounts. 
+Instead of giving a user account for production, a person can access the production s3 bucket.  (Cross account access)
 
 Least privilege principle covers the test-user not to terminate the instances. 
 
