@@ -2,7 +2,8 @@ IAM User - test-user is created in the console and enabled login console access 
 
 IAM Group - test-group is created and added the test-user in the group. 
 
-IAM Policy - test-policy will allow EC2 full access and deny terminate instance are created as custom managed policy. Attached custom managed policy to the test-group Now the test-user can access full ec2 instance but deny to terminate the instances. 
+IAM Policy - test-policy will allow EC2 full access and deny terminate instance are created as custom managed policy. 
+Attached custom managed policy to the test-group Now the test-user can access full ec2 instance but deny to terminate the instances. 
 
 IAM Role - 
 test-role is created with trust policy as same account and added permission policy as to access full s3 bucket. 
